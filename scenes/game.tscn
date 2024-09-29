@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2eu7lsgbojkn"]
+
+[ext_resource type="PackedScene" uid="uid://dj420sm7janwv" path="res://scenes/Wall.tscn" id="1_cv01c"]
+[ext_resource type="Script" path="res://scenes/script/game.gd" id="1_tmwkx"]
+[ext_resource type="PackedScene" uid="uid://wx4eiomls3l2" path="res://scenes/player.tscn" id="1_wbbyd"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6d8mt"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_tmwkx")
+
+[node name="Player" parent="." instance=ExtResource("1_wbbyd")]
+position = Vector2(590, 584)
+
+[node name="TopWall" parent="." instance=ExtResource("1_cv01c")]
+material = SubResource("CanvasItemMaterial_6d8mt")
+position = Vector2(574, 0)
+
+[node name="LeftWall" parent="." instance=ExtResource("1_cv01c")]
+material = SubResource("CanvasItemMaterial_6d8mt")
+position = Vector2(0, 291)
+rotation = -1.5708
+
+[node name="RightWall" parent="." instance=ExtResource("1_cv01c")]
+material = SubResource("CanvasItemMaterial_6d8mt")
+position = Vector2(1150, 309)
+rotation = -1.5708
+
+[node name="BottomWall" parent="." instance=ExtResource("1_cv01c")]
+material = SubResource("CanvasItemMaterial_6d8mt")
+position = Vector2(590, 652)

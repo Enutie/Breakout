@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dj420sm7janwv"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_up2fo"]
+bounce = 0.3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5l704"]
+size = Vector2(1173, 42)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_cyt6x"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+modulate = Color(0.981044, 0.344678, 0.650558, 1)
+position = Vector2(2, 2)
+physics_material_override = SubResource("PhysicsMaterial_up2fo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -1)
+shape = SubResource("RectangleShape2D_5l704")
+debug_color = Color(0.565625, 0.529937, 0.486416, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.50002, -1)
+scale = Vector2(1175, 38)
+texture = SubResource("PlaceholderTexture2D_cyt6x")
